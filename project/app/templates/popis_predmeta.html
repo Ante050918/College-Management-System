@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block popis_predmeta %}
+Upisani predmeti:<br><br>
+{%for upisan in predmeti%}
+  {%for predmet in list_u%}
+    {%if upisan.id == predmet.predmet_id %}
+      {{upisan.ime}}({{upisan.kod}})<a href="{%url 'ispis_predmeta' predmet.predmet_id %}">Ispisi predmet</a><br><br>
+    {%endif%}
+  {%endfor%}
+{%endfor%}
+<br><br>
+
+Neupisani predmeti:<br><br>
+
+{%for i in lista%}
+ {{i.ime}}({{i.kod}}) <a href="{%url 'upis_predmeta' i.id %}">Upisi predmet</a><br><br>
+{%endfor%}
+{% endblock %}
+
+
+    

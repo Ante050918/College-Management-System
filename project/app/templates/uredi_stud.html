@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block uredi_stud %}
+<form method="post">
+  <h1>UREDI STUDENTA</h1>
+  <table>
+    {{form1.as_table}}
+  </table><br>
+  <a class="link_uredi" href="{%url 'pregled_studenata' %}">&#129060; Natrag</a> <input class="botun" type="submit" value="Update">
+  {% csrf_token %}
+</form>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block pocetna %}
+<div>
+  <div class="linkovi">
+    <a class="pocetni_linkovi3" href="{%url 'pregled_predmeta' %}">Predmeti</a> <a class="pocetni_linkovi3" href="{%url 'pregled_profesora' %}">Profesori</a> <a class="pocetni_linkovi3" href="{%url 'pregled_studenata' %}">Studenti</a> <a class="pocetni_linkovi3" href="{%url 'logout_user' %}">Logout</a>
+  </div>
+  <div class="poruka">
+    <p class="pozdrav">Zdravo {{user.username}}(admin)</p>
+  </div>
+</div>
+{% endblock %}

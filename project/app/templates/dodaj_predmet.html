@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block dodaj_predmet %}
+<form method="post">
+  <h1>NOVI PREDMET</h1>
+  <table>
+    {{form1.as_table}}
+    {{form2.as_table}}
+  </table><br>
+  <a class="link_uredi" href="{%url 'pregled_predmeta' %}">&#129060; Natrag</a> <input class="botun" type="submit" value="Add">
+  {% csrf_token %}
+</form>
+{% endblock %}

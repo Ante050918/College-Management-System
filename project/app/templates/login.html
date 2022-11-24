@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block login %}
+<h1 class="login">DOBRODOSLI!</h1>
+<form action ="" method="post">
+    {% csrf_token %}
+    
+    <div class="prijava">
+        <p class="naslov-prijava">PRIJAVI SE</p>
+        <div class="podaci">
+            Username:
+            <input type="text" name="username" placeholder="Enter username">
+        </div>
+        <div class="podaci">
+            Password:
+            <input type="password" name="password" placeholder="Password">
+        </div>
+        <div class="podaci">
+            <input type="submit" class="button" value="Login">
+        </div>
+    </div>
+</form>
+
+{% endblock %}

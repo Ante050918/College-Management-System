@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block pregled_predmeta %}
+<h1>PREDMETI</h1>
+<div class="predmeti">
+  <a class="novi" href="{%url 'dodaj_predmet' %}">&#43; Novi predmet</a><br>
+  <div class="predmet">
+    {% for predmet in data %}
+    <p>{{predmet.ime}} ({{predmet.kod}}) <a href="{%url 'details' predmet.id %}">Details</a> <a href="{%url 'edit' predmet.id %}">Edit</a> <a href="{%url 'popis_studenata' predmet.id %}">Student list</a></p>
+    {% endfor %}
+  </div><br>
+</div><br>
+
+<div class="init">
+  <a class='pocetna_link' href="{%url 'pocetna' %}">&#129060; Početna</a>
+  {% if data.has_previous %}
+  <a href="?page=1">&laquo; first</a>
+  <a href="?page={{data.previous_page_number}}">&#8592; previous</a>
+  {% endif %}
+  Page {{data.number}} of {{data.paginator.num_pages}}
+
+  {% if data.has_next %}
+  <a href="?page={{data.next_page_number}}">next &rarr;</a>
+  <a href="?page={{data.paginator.num_pages}}">last &raquo;</a>
+  {% endif %}
+  </div>
+{% endblock %}

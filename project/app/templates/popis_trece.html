@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block popis_trece %}
+Redovni studenti trece godine su:
+{%for j in redovni%}
+{%for i in upis%}
+{%if i.id == j.student_id%}
+{{j.first_name}}
+{%endif%}
+{%endfor%}
+{%endfor%}
+{% endblock %}

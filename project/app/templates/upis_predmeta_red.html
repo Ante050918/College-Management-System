@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% block upis_predmeta_red %}
+<h1>UPISNI LIST STUDENTA ({{student.first_name}} {{student.last_name}})</h1>
+<a class="link_uredi4" href="{%url 'pocetna_stud' %}">&#129060; Natrag</a>
+<div class="upisni_list">
+  <div class="red-sem">
+    <h2>Semestar 1:</h2>
+    <h4>Upisani predmeti:</h4>
+    {%for upisan in predmeti%}
+      {%for predmet in list_u%}
+        {%if upisan.id == predmet.predmet_id and upisan.sem_redovni == 1 %}
+          {{upisan.ime}}({{upisan.kod}})<a href="{%url 'ispis_predmeta' predmet.predmet_id %}">Ispisi predmet</a><br><br>
+        {%endif%}
+      {%endfor%}
+    {%endfor%}
+    <br><br>
+
+    <h4>Polozeni predmeti:</h4>
+    {%for upisan in predmeti%}
+      {%for predmet in list_p%}
+        {%if upisan.id == predmet.predmet_id and upisan.sem_redovni == 1 %}
+          {{upisan.ime}}({{upisan.kod}})<br><br>
+        {%endif%}
+      {%endfor%}
+    {%endfor%}
+    <br><br>
+
+    <h4>Neupisani predmeti:</h4>
+
+    {%for i in lista1%}
+    {{i.ime}}({{i.kod}}) <a href="{%url 'upis_predmeta' i.id %}">Upisi predmet</a><br><br>
+    {%endfor%}
+  </div>
+  <div class="red-sem">
+    <h2>Semestar 2:</h2>
+    <h4>Upisani predmeti:</h4>
+    {%for upisan in predmeti%}
+      {%for predmet in list_u%}
+        {%if upisan.id == predmet.predmet_id and upisan.sem_redovni == 2 %}
+          {{upisan.ime}}({{upisan.kod}})<a href="{%url 'ispis_predmeta' predmet.predmet_id %}">Ispisi predmet</a><br><br>
+        {%endif%}
+      {%endfor%}
+    {%endfor%}
+    <br><br>
+
+    <h4>Polozeni predmeti:</h4>
+    {%for upisan in predmeti%}
+      {%for predmet in list_p%}
+        {%if upisan.id == predmet.predmet_id and upisan.sem_redovni == 2 %}
+          {{upisan.ime}}({{upisan.kod}})<br><br>
+        {%endif%}
+      {%endfor%}
+    {%endfor%}
+    <br><br>
+
+    <h4>Neupisani predmeti:</h4>
+
+    {%for i in lista2%}
+    {{i.ime}}({{i.kod}}) <a href="{%url 'upis_predmeta' i.id %}">Upisi predmet</a><br><br>
+    {%endfor%}
+  </div>
+  <div class="red-sem">
+    <h2>Semestar 3:</h2>
+    <h4>Upisani predmeti:</h4>
+    {%for upisan in predmeti%}
+      {%for predmet in list_u%}
+        {%if upisan.id == predmet.predmet_id and upisan.sem_redovni == 3 %}
+          {{upisan.ime}}({{upisan.kod}})<a href="{%url 'ispis_predmeta' predmet.predmet_id %}">Ispisi predmet</a><br><br>
+        {%endif%}
+      {%endfor%}
+    {%endfor%}
+    <br><br>
+
+    <h4>Polozeni predmeti:</h4>
+    {%for upisan in predmeti%}
+      {%for predmet in list_p%}
+        {%if upisan.id == predmet.predmet_id and upisan.sem_redovni == 3 %}
+          {{upisan.ime}}({{upisan.kod}})<br><br>
+        {%endif%}
+      {%endfor%}
+    {%endfor%}
+    <br><br>
+
+    <h4>Neupisani predmeti:</h4>
+
+    {%for i in lista3%}
+    {{i.ime}}({{i.kod}}) <a href="{%url 'upis_predmeta' i.id %}">Upisi predmet</a><br><br>
+    {%endfor%}
+  </div>
+  <div class="red-sem">
+    <h2>Semestar 4:</h2>
+    <h4>Upisani predmeti:</h4>
+    {%for upisan in predmeti%}
+      {%for predmet in list_u%}
+        {%if upisan.id == predmet.predmet_id and upisan.sem_redovni == 4 %}
+          {{upisan.ime}}({{upisan.kod}})<a href="{%url 'ispis_predmeta' predmet.predmet_id %}">Ispisi predmet</a><br><br>
+        {%endif%}
+      {%endfor%}
+    {%endfor%}
+    <br><br>
+
+    <h4>Polozeni predmeti:</h4>
+    {%for upisan in predmeti%}
+      {%for predmet in list_p%}
+        {%if upisan.id == predmet.predmet_id and upisan.sem_redovni == 4 %}
+          {{upisan.ime}}({{upisan.kod}})<br><br>
+        {%endif%}
+      {%endfor%}
+    {%endfor%}
+    <br><br>
+
+    <h4>Neupisani predmeti:</h4>
+
+    {%for i in lista4%}
+    {{i.ime}}({{i.kod}}) <a href="{%url 'upis_predmeta' i.id %}">Upisi predmet</a><br><br>
+    {%endfor%}
+  </div>
+  <div class="red-sem">
+    <h2>Semestar 5:</h2>
+    <h4>Upisani predmeti:</h4>
+    {%for upisan in predmeti%}
+      {%for predmet in list_u%}
+        {%if upisan.id == predmet.predmet_id and upisan.sem_redovni == 5 %}
+          {{upisan.ime}}({{upisan.kod}})<a href="{%url 'ispis_predmeta' predmet.predmet_id %}">Ispisi predmet</a><br><br>
+        {%endif%}
+      {%endfor%}
+    {%endfor%}
+    <br><br>
+
+    <h4>Polozeni predmeti:</h4>
+    {%for upisan in predmeti%}
+      {%for predmet in list_p%}
+        {%if upisan.id == predmet.predmet_id and upisan.sem_redovni == 5 %}
+          {{upisan.ime}}({{upisan.kod}})<br><br>
+        {%endif%}
+      {%endfor%}
+    {%endfor%}
+    <br><br>
+
+    <h4>Neupisani predmeti:</h4>
+
+    {%for i in lista5%}
+    {{i.ime}}({{i.kod}}) <a href="{%url 'upis_predmeta' i.id %}">Upisi predmet</a><br><br>
+    {%endfor%}
+  </div>
+  <div class="red-sem">
+    <h2>Semestar 6:</h2>
+    <h4>Upisani predmeti:</h4>
+    {%for upisan in predmeti%}
+      {%for predmet in list_u%}
+        {%if upisan.id == predmet.predmet_id and upisan.sem_redovni == 6 %}
+          {{upisan.ime}}({{upisan.kod}})<a href="{%url 'ispis_predmeta' predmet.predmet_id %}">Ispisi predmet</a><br><br>
+        {%endif%}
+      {%endfor%}
+    {%endfor%}
+    <br><br>
+
+    <h4>Polozeni predmeti:</h4>
+    {%for upisan in predmeti%}
+      {%for predmet in list_p%}
+        {%if upisan.id == predmet.predmet_id and upisan.sem_redovni == 6 %}
+          {{upisan.ime}}({{upisan.kod}})<br><br>
+        {%endif%}
+      {%endfor%}
+    {%endfor%}
+    <br><br>
+
+    <h4>Neupisani predmeti:</h4>
+
+    {%for i in lista6%}
+    {{i.ime}}({{i.kod}}) <a href="{%url 'upis_predmeta' i.id %}">Upisi predmet</a><br><br>
+    {%endfor%}
+  </div>
+</div>
+{% endblock %}

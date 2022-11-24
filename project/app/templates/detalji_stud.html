@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block detalji_stud %}
+<h1>DETALJI STUDENTA</h1>
+<table>
+  <tr>
+    <th>Ime</th>
+    <th>Prezime</th>
+    <th>Email</th>
+    <th>Username</th>
+    <th>Uloga</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>{{data_u.first_name}}</td>
+    <td>{{data_u.last_name}}</td>
+    <td>{{data_u.email}}</td>
+    <td>{{data_u.username}}</td>
+    <td>{{data_r.role}}</td>
+    <td>{{data_s.status}}</td>
+  </tr>
+</table><br>
+{%if data_s.status == 'red' %}
+  <a class="link_uredi" href="{%url 'redovni_studenti' %}">&#129060; Natrag</a>
+{%elif data_s.status == 'izvan' %}
+  <a class="link_uredi" href="{%url 'izvanredni_studenti' %}">&#129060; Natrag</a>
+{%endif%}
+{% endblock %}

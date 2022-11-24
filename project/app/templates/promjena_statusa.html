@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block promjena_statusa %}
+<h1>POPIS STUDENATA PO PREDMETU</h1>
+<div class="predmeti">
+  <div class="predmet">
+    {%for student in studenti%}
+      {%for users in user%}
+      
+        {%if student.predmet_id == predmet.id and student.student_id == users.id and student.status == 'upisan'%}
+        <p>{{users.first_name}} {{users.last_name}}<a href="{%url 'status_polozeno' predmet.id users.id %}">Promjeni status u polozeno</a></p>
+        {%endif%}
+      {%endfor%}
+    {%endfor%}
+  </div>
+</div>
+
+<a class='pocetna_link_pspp' href="{%url 'pregled_predmeta_prof' %}">&#129060; Natrag</a>
+{% endblock %}

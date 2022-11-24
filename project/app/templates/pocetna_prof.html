@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block pocetna_prof %}
+<div>
+  <div class="linkovi">
+    <a class="pocetni_linkovi3" href="{%url 'pregled_predmeta_prof' %}">Predmeti</a> <a class="pocetni_linkovi3" href="{%url 'logout_user' %}">Logout</a>
+  </div>
+  <div class="poruka">
+    <p class="pozdrav">Zdravo {{user.username}}({{user.role.role}})</p>
+  </div>
+</div>
+{% endblock %}

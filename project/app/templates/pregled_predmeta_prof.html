@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block pregled_predmeta_prof %}
+<h1>PREDMETI</h1>
+<div class="predmeti">
+  <div class="predmet">
+    {% for predmet in data %}
+    <p>{{predmet.ime}} ({{predmet.kod}})<a href="{%url 'promjena_statusa' predmet.id %}">Promjeni status za studenta</a> <a href="{%url 'popis_studenata_prof' predmet.id %}">Lista upisanih studenata</a> <a href="{%url 'popis_polozenih' predmet.id %}">Lista studenata koji su polozili predmet</a></p>
+    {% endfor %}
+  </div><br>
+</div><br>
+<a class='pocetna_link2' href="{%url 'pocetna_prof' %}">&#129060; Početna</a>
+{% endblock %}

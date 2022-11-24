@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block popis_studenata_po_predmetu_prof %}
+<h1>POPIS STUDENATA PO PREDMETU</h1>
+<div class="predmeti">
+  <div class="predmet">
+    {%for student in studenti%}
+      {%for users in user%}
+        {%if student.predmet_id == predmet.id and student.student_id == users.id and student.status == 'upisan' %}
+        <p>{{users.first_name}} {{users.last_name}}
+        {%endif%}
+      {%endfor%}
+    {%endfor%}
+  </div>
+</div>
+
+<a class='pocetna_link_pspp' href="{%url 'pregled_predmeta_prof' %}">&#129060; Natrag</a>
+{% endblock %}

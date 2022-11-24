@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block pregled_profesora %}
+<h1>PROFESORI</h1>
+<div class="predmeti">
+  <a class="novi" href="{%url 'dodaj_profesora' %}">&#43; Novi profesor</a><br>
+  <div class="predmet">
+    {%for prof in data%}
+    <p>prof. {{prof.first_name}}  {{prof.last_name}} <a href="{%url 'details_prof' prof.id %}">Details</a> <a href="{%url 'edit_prof' prof.id %}">Edit</a></p>
+    {%endfor%}
+  </div><br>
+</div><br>
+<div class="init">
+  <a class='pocetna_link' href="{%url 'pocetna' %}">&#129060; Početna</a>
+  {% if data.has_previous %}
+  <a href="?page=1">&laquo; first</a>
+  <a href="?page={{data.previous_page_number}}">&#8592; previous</a>
+  {% endif %}
+  Page {{data.number}} of {{data.paginator.num_pages}}
+
+  {% if data.has_next %}
+  <a href="?page={{data.next_page_number}}">next &rarr;</a>
+  <a href="?page={{data.paginator.num_pages}}">last &raquo;</a>
+  {% endif %}
+  </div>
+{% endblock %}

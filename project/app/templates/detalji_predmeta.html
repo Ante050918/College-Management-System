@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block detalji_predmeta %}
+<h1>DETALJI PREDMETA</h1>
+<table>
+  <caption>{{data.ime}}</caption>
+  <tr>
+    <th>
+      Kod
+    </th>
+    <th>
+      Program
+    </th>
+    <th>
+      Bodovi
+    </th>
+    <th>
+      Semestar redovni
+    </th>
+    <th>
+      Semestar izvanredni
+    </th>
+    <th>
+      Izborni predmet
+    </th>
+    <th>
+      Nositelj
+    </th>
+  </tr>
+  <tr>
+    <td>
+      {{data.kod}}
+    </td>
+    <td>
+      {{data.program}}
+    </td>
+    <td>
+      {{data.bodovi}}
+    </td>
+    <td>
+      {{data.sem_redovni}}
+    </td>
+    <td>
+      {{data.sem_izvanredni}}
+    </td>
+    <td>
+      {{data.izborni}}
+    </td>
+    <td>
+      {%for user in data3%}
+        {%if user.id == data2.nositelj_id%}
+          {{user.first_name}} {{user.last_name}}
+        {%endif%}
+      {%endfor%}
+    </td>
+  </tr>
+</table><br>
+<a class="link_uredi" href="{%url 'pregled_predmeta' %}">&#129060; Natrag</a>
+{% endblock %}

@@ -1,0 +1,29 @@
+profesori-ime:  lozinka:
+          baras-        ivo12345
+          haidi-        haidi12345
+          arijana-      profa123456
+          cizmic-       ivana12345
+          ljilja-       ljilja1234 ili ljilja12345
+          grgic-        niko1234
+          kedzo-        ivan12345 ili ivan1234
+          rodic-        mrodic12345
+          roguljic-     nada12345
+          roncevic-     toma12345
+          ruzic-        ivica12345
+          sartori-      lada12345
+
+studenti-ime:        lozinka:
+             rubelj-         ante12345
+             krzelj-         toni12345
+             mestrovic-      tonia12345
+             guja-           vmg12345
+             drazetic-       marta12345
+             ducic-          edin12345
+             basic-          teab123456
+             mihanovic-      ivanam12345
+             melvan-         antem12345
+             vidovic-        pero12345
+             vidovicluka-    lukav12345
+             papic-          anap12345
+             kovacevic-      ivank12345
+             bosnjak-        niko12345

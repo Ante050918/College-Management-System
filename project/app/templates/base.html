@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      h1{
+        text-align: center;
+        margin-bottom: 50px;
+    
+        
+      }
+      table,th,td{
+        border:1px solid black;
+      }
+      th{
+        background-color: rgb(234, 243, 155);
+      }
+      td{
+        background-color: rgb(222, 228, 171);
+      }
+      table{
+        width:73%;
+        margin-left:200px;
+        margin-right:200px;
+      }
+      caption{
+        font-size: 25px;
+        font-weight: bold;
+        }
+      th, td{
+        text-align: center;
+      }
+      a{
+        text-decoration: none;
+        color:blue;
+        margin-left:10px;
+      }
+      a:hover{
+        color:lightskyblue;
+      }
+      .predmet p{
+        border: 1px solid blue;
+        padding: 20px 10px;
+        margin:0 20px 0 20px;
+        border-top: none;
+
+      }
+      .predmet p:first-child{
+        margin-top:10px;
+        border: 1px solid blue;
+      }
+      .predmet p:last-child{
+        margin-bottom: 20px;;
+      }
+      .predmeti{
+        padding-top: 10px;
+        border: 1px solid blue;
+        border-radius: 12px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 10px;;
+      }
+      .novi{
+        margin-left:20px;
+      }
+      .botun{
+        margin-left:885px;
+        width:150px;
+        font-size: 18px;
+        background-color: rgb(234, 243, 155);
+        color:black;
+        font-weight: bold;
+      }
+      .botun:hover{
+        background-color: black;
+        color:white;
+        cursor:pointer
+      }
+      input{
+        width:400px;
+      }
+      .link_uredi{
+        margin-left: 200px;
+      }
+
+      .linkovi{
+        border-bottom: 1px solid lightgrey;
+        margin-top: 20px;
+        box-shadow: 10px 5px 20px grey;
+        padding: 15px 0;
+      }
+      .pocetna_link{
+        margin-left:50px;
+        margin-right:500px;
+      }
+      .pocetni_linkovi{
+        font-size:25px;
+        margin-right: 50px;
+      }
+      .pocetni_linkovi:last-child{
+        margin-left: 860px;
+      }
+      .pocetni_linkovi:first-child{
+        margin-left: 50px;
+      }
+      .poruka{
+        text-align: center;
+      }
+      .pozdrav{
+        margin-top:200px;
+        font-size: 100px;
+        text-shadow: 5px 5px 10px black;
+      }
+
+      .init{margin-top:10px;
+      }
+      .pocetna_link_pspp{
+        margin-left:50px;
+        margin-right:500px;
+        padding-top:10px;
+      }
+      .linkovi2{
+        border: 1px solid lightgrey;
+        margin-top: 20px;
+        font-size: 25px;
+        padding: 15px 0;
+        margin-bottom:30px;
+      }
+
+      .pocetni_linkovi2:last-child{
+        margin-left: 1000px;
+      }
+      .pocetni_linkovi2:first-child{
+        margin-left: 50px;
+      }
+      .pocetna_link2{
+        margin-left:50px;
+        margin-right:500px;
+        font-size: 20px;
+      }
+
+      .pocetni_linkovi3{
+        font-size:25px;
+        margin-right: 50px;
+  
+      }
+
+      .pocetni_linkovi3:first-child{
+        margin-left: 50px;
+      }
+     
+      .upisni_list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding:10px;
+        gap:5px;
+        box-shadow: 10px 5px 20px grey;
+        margin: 0 10px 0 10px;
+      }
+
+      .red-sem{
+        border:1px solid black;
+        padding: 0 10px 10px 10px;
+      }
+
+      h2{
+        text-align: center;
+      }
+
+      .link_uredi4{
+        font-size: 22px;
+      }
+      .prijava{
+        height:250px;
+        padding: 10px 20px 20px 20px;
+        color:black;
+        border:1px solid black;
+        border-radius: 20px;
+        text-align: center;
+        font-weight:bold;
+        font-size: 18px;
+        width: 500px;
+        margin: auto;
+        box-shadow: 10px 5px 20px grey;
+      }
+
+      .podaci{
+        padding-bottom: 20px;
+      }
+      .button{
+        width:100px;
+        border-radius: 5px;
+        font-size: 15px;
+        transition-duration: 0.4s;
+        cursor:pointer;
+      }
+      .button:hover{
+        background-color: black;
+        color: white;
+      }
+      .login{
+        margin-bottom: 120px;
+        font-size: 70px;
+      }
+      .naslov-prijava{
+        margin-top:10px;
+        font-size: 20px;
+      }
+
+    </style>
+</head>
+<body>
+    {% block set_admin %}
+    {% endblock %}
+    {% block pregled_predmeta %}
+    {% endblock %}
+    {% block dodaj_predmet %}
+    {% endblock %}
+    {% block detalji_predmeta %}
+    {% endblock %}
+    {% block uredi_predmet %}
+    {% endblock %}
+    {% block pocetna %}
+    {% endblock %}
+    {% block pregled_profesora %}
+    {% endblock %}
+    {% block detalji_prof %}
+    {% endblock %}
+    {% block uredi_prof %}
+    {% endblock %}
+    {% block dodaj_profesora %}
+    {% endblock %}
+    {% block pregled_studenata %}
+    {% endblock %}
+    {% block detalji_stud %}
+    {% endblock %}
+    {% block uredi_stud %}
+    {% endblock %}
+    {% block dodaj_studenta %}
+    {% endblock %}
+    {% block logout %}
+    {% endblock %}
+    {% block upis_predmeta_izvan %}
+    {% endblock %}
+    {% block upis_predmeta_red %}
+    {% endblock %}
+    {% block upis_predmeta_izvan_admin %}
+    {% endblock %}
+    {% block upis_predmeta_red_admin %}
+    {% endblock %}
+    {% block popis_predmeta %}
+    {% endblock %}
+    {% block login %}
+    {% endblock %}
+    {% block popis_studenata_po_predmetu %}
+    {% endblock %}
+    {% block pregled_studenata_red %}
+    {% endblock %}
+    {% block pregled_studenata_izvan %}
+    {% endblock %}
+    {% block pocetna_prof%}
+    {% endblock %}
+    {% block pregled_predmeta_prof%}
+    {% endblock %}
+    {% block popis_studenata_po_predmetu_prof%}
+    {% endblock %}
+    {% block promjena_statusa%}
+    {% endblock %}
+    {% block popis_polozenih%}
+    {% endblock %}
+    {% block pocetna_stud%}
+    {% endblock %}
+    {% block popis_trece%}
+    {% endblock %}
+</body>
+</html>

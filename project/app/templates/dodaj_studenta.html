@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block dodaj_studenta %}
+<form method="post">
+  <h1>NOVI STUDENT</h1>
+  <table>
+    {{form1.as_table}}
+    {{form2.as_table}}
+    {{form3.as_table}}
+  </table><br>
+  <a class="link_uredi" href="{%url 'pregled_studenata' %}">&#129060; Natrag</a> <input class="botun" type="submit" value="Add">
+  {% csrf_token %}
+</form>
+{% endblock %}

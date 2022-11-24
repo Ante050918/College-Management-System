@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block pocetna_stud %}
+<div>
+  <div class="linkovi">
+    {%if user.status.status == 'izvan' %}
+      <a class="pocetni_linkovi3" href="{%url 'upis_predmeta_izvan' user.id%}">Upisni List</a> <a class="pocetni_linkovi3" href="{%url 'logout_user' %}">Logout</a>
+    {%elif user.status.status == 'red' %}
+      <a class="pocetni_linkovi3" href="{%url 'upis_predmeta_red' user.id%}">Upisni List</a> <a class="pocetni_linkovi3" href="{%url 'logout_user' %}">Logout</a>
+    {%endif%}
+    
+  </div>
+  <div class="poruka">
+    <p class="pozdrav">Zdravo {{user.username}}({{user.role.role}}, {{user.status.status}})</p>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block pregled_studenata %}
+<h1>STUDENTI</h1>
+<div class="linkovi2">
+  <a class="pocetni_linkovi3" href="{%url 'redovni_studenti' %}">Redovni studenti</a> <a class="pocetni_linkovi3" href="{%url 'izvanredni_studenti' %}">Izvanredni studenti</a>
+</div>
+<a class='pocetna_link2' href="{%url 'pocetna' %}">&#129060; Početna</a>
+{% endblock %}
